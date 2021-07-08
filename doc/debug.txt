@@ -1,0 +1,37 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Dashboard",
+            "program": "${workspaceFolder}/dashboard/bin/www",
+            "cwd": "${workspaceFolder}/dashboard",
+            "env": { "NODE_ENV": "prep", "PORT": "8080" }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "generador",
+            "args": ["trans", "suc", "2021-07-07","10000"],
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\generate\\app.js"
+        },        {
+            "type": "node",
+            "request": "launch",
+            "name": "destructor",
+            "args": ["trans", "suc", "2021-05-06","00:00","2021-05-06","23:59","99"],
+           
+
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\destroy\\app.js"
+        }
+    ]
+}
