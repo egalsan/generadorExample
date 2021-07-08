@@ -1,0 +1,68 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet" href="/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" href="/jquery/css/jquery.dataTables.min.css")
+    link(rel='stylesheet' href='/chartjs/Chart.css')
+    link(rel="stylesheet" href="/stylesheets/style.css")
+    script(src="/jquery/jquery.min.js")
+    script(src="/jquery/js/jquery.dataTables.min.js")
+    script(src="/bootstrap/js/bootstrap.min.js")
+    script(src="/chartjs/Chart.min.js")
+    script(src="/moment/moment.js")
+  body
+    .wrapper
+            nav#sidebar
+                .sidebar-header.text-center
+                    img.img-fluid(src="/images/LogoAbaton.png" alt="Logo Abaton" style="width: 50%;")
+                .user-panel.mt-3.pb-3.mb-3.d-flex
+                    .info(style="width: 100%;")
+                        a.d-block(href="#")
+                        h1#hour 
+                        h1#hour-seconds
+                        span#hour-format 
+                        a.d-block.text-center(href="#")
+                        h4#date 
+                //- TODO: metadatos?                        
+                ul.list-unstyled.components
+                    li
+                        //- TODO: -> /
+                        a(href="/dash")
+                            img.img-fluid(src="/images/icons/home.png", alt)
+                            | Inicio
+                   
+                        li#dashboard
+                            a(href="/dash")
+                                img.img-fluid(src="/images/icons/dashboard.png", alt)
+                                | Dashboard
+                    li
+                        a(href="/login")
+                            img.img-fluid(src="/images/icons/look.png", alt)
+                            | Salir
+            .container(style="max-width:1200px;")
+                nav.navbar.navbar-default(style="justify-content: normal;")
+                    img#sidebarCollapse.img-fluid.hamburger(src="/images/icons/menu.png", alt)
+                    .collapse.navbar-collapse#bs-example-navbar-collapse-1
+                        ul.nav.navbar-nav.navbar-right
+                            li
+                                a(href="#") Page
+                            li
+                                a(href="#") Page
+                            li
+                                a(href="#") Page
+                            li
+                                a(href="#") Page
+                    form.form-inline
+                        .input-group.input-group-sm
+                    div
+                        //  Right navbar links
+                        a.nav-link.menu(data-widget="control-sidebar", data-slide="true", href="/admin", role="button")
+                            img.img-fluid.search(src="/images/icons/setting.png", alt)
+                        a.nav-link.menu(data-widget="control-sidebar", data-slide="true", href="#", role="button")
+                            img.img-fluid.search(src="/images/icons/bell.png", alt)
+                        a.nav-link.menu(data-widget="control-sidebar", data-slide="true", href="/login", role="button")
+                            img.img-fluid.search(src="/images/icons/look.png", alt)
+
+                block content
+  block scripts

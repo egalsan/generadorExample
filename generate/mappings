@@ -1,0 +1,21 @@
+PUT _template/template_1
+{
+  "index_patterns": ["trans-*", "temp-*"],
+ 
+  "mappings": {
+      "properties" : {
+        "amount" : {
+          "type" : "float"
+        },
+        "channel" : {
+          "type" : "keyword"
+        },
+        "date" : {
+          "type" : "date"
+        },
+        "type":{
+          "type": "keyword"
+        }
+      }
+  }
+}

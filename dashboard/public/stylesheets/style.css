@@ -1,0 +1,336 @@
+html body {
+  padding: 0;
+  background: #323233;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #323233 0%, #384145 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #323233 0%, #384145 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #323233 0%, #384145 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  font: 14px "Tahoma", Helvetica, Arial, sans-serif;
+  color: #ffffff; }
+
+a {
+  color: #00b7ff; }
+
+.wrapper {
+  display: flex;
+  align-items: stretch; }
+
+#sidebar {
+  min-width: 210px;
+  max-width: 210px;
+  background: #272830;
+  color: #fff;
+  transition: all 0.3s; }
+  #sidebar a,
+  #sidebar a:hover,
+  #sidebar a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s; }
+  #sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center; }
+    #sidebar.active .sidebar-header h3,
+    #sidebar.active .CTAs {
+      display: none; }
+    #sidebar.active .sidebar-header strong {
+      display: block; }
+  #sidebar ul li a {
+    text-align: left; }
+  #sidebar.active ul li a {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.85em; }
+    #sidebar.active ul li a i {
+      margin-right: 0;
+      display: block;
+      font-size: 1.8em;
+      margin-bottom: 5px; }
+  #sidebar.active ul ul a {
+    padding: 10px !important; }
+  #sidebar.active a[aria-expanded="false"]::before, #sidebar.active a[aria-expanded="true"]::before {
+    top: auto;
+    bottom: 5px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%); }
+  #sidebar .sidebar-header {
+    padding: 20px;
+    background: #272830; }
+    #sidebar .sidebar-header strong {
+      display: none;
+      font-size: 1.8em; }
+  #sidebar ul.components {
+    padding: 0 10px; }
+  #sidebar ul li {
+    padding: 5% 0; }
+    #sidebar ul li a {
+      padding: 10px;
+      font-size: 1.1em;
+      display: block; }
+      #sidebar ul li a:hover {
+        color: #272830;
+        background: #fff; }
+      #sidebar ul li a i {
+        margin-right: 10px; }
+    #sidebar ul li.active > a {
+      color: #fff;
+      background: #323233; }
+
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #323233; }
+
+#sidebar ul li img {
+  width: 15%;
+  margin: 0 4% 0 0; }
+
+.hamburger {
+  width: 40px;
+  margin-right: 34px; }
+
+.search {
+  width: 40px; }
+
+a[data-toggle="collapse"] {
+  position: relative; }
+
+a[aria-expanded="false"]::before,
+a[aria-expanded="true"]::before {
+  content: "\e259";
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-family: "Glyphicons Halflings";
+  font-size: 0.6em; }
+
+a[aria-expanded="true"]::before {
+  content: "\e260"; }
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc; }
+
+ul.CTAs {
+  padding: 20px; }
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px; }
+
+a.download {
+  background: #fff;
+  color: #272830; }
+
+a.article,
+a.article:hover {
+  background: #6d7fcc !important;
+  color: #fff !important; }
+
+a.menu {
+  display: inline-block;
+  padding: 10px; }
+
+.rounded-circle {
+  width: 50px;
+  height: 50px; }
+
+.user-panel {
+  padding: 0 0 0 19px !important;
+  margin: 15px 0 !important; }
+
+.info {
+  padding: 0 10px;
+  font-size: 14px; }
+  .info #hour {
+    font-size: 2.5em; }
+  .info #hour-seconds {
+    font-size: 1rem; }
+  .info #hour-format {
+    vertical-align: top;
+    margin-top: 9px;
+    font-size: 10px;
+    padding-left: 5%; }
+  .info #date {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.2rem; }
+
+.float-sm-right {
+  float: right !important;
+  color: #bebec0; }
+
+.breadcrumb {
+  margin-top: 1rem; }
+
+.breadcrumb-item.active {
+  color: #ffffff; }
+
+.chart-container {
+  width: auto !important;
+  height: 450px !important; }
+
+#dash {
+  padding: 0; }
+  #dash .col-md-6 {
+    width: 48%; }
+    #dash .col-md-6 .valor {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+  #dash .col-md-5 {
+    width: 39% !important; }
+    #dash .col-md-5 #trafficCircle {
+      height: 150px !important;
+      width: 150px !important;
+      float: right;
+      margin: 25px; }
+    #dash .col-md-5 .valor {
+      margin-top: 15%; }
+  #dash .title {
+    font-family: Bahnschrift;
+    font-size: 50px;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.75); }
+  #dash .widget {
+    float: left;
+    background-color: #272c31;
+    margin: 20px 0 0 12px;
+    border-radius: 8px; }
+    #dash .widget .head {
+      padding: 5px 16px;
+      border-bottom: solid 1px #ffffff; }
+      #dash .widget .head .filters {
+        width: 100%;
+        justify-items: initial;
+        display: inline-flex;
+        justify-content: space-between;
+        margin: 2px 0 0 0; }
+        #dash .widget .head .filters .close {
+          width: 16px;
+          margin: 0 -15px 3px 10px;
+          float: right; }
+      #dash .widget .head input[type="button"] {
+        border: solid 1px #4fc6eb;
+        background-color: transparent;
+        color: #ffffff;
+        width: 120px;
+        height: 26px;
+        border-radius: 13px; }
+    #dash .widget .rainbow {
+      width: 8px;
+      height: 0;
+      margin-left: 10px 0 0 20px;
+      border-radius: 5px;
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff5b32+0,fff830+50,40ff32+78,00bff9+100 */
+      background: #ff5b32;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #ff5b32 0%, #fff830 50%, #40ff32 78%, #00bff9 100%);
+      /* FF3.6-15 */
+      background: -webkit-linear-gradient(top, #ff5b32 0%, #fff830 50%, #40ff32 78%, #00bff9 100%);
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, #ff5b32 0%, #fff830 50%, #40ff32 78%, #00bff9 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b32', endColorstr='#00bff9',GradientType=0 );
+      /* IE6-9 */
+      box-shadow: 5px 5px rgba(0, 0, 0, 0.75);
+      margin: 5px 0 0 10px; }
+    #dash .widget .bullet {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      margin: 0 0 0 50px; }
+      #dash .widget .bullet.darkblue {
+        background-color: #08243c; }
+      #dash .widget .bullet.lightIn {
+        background-color: #ffbb00; }
+      #dash .widget .bullet.lightOut {
+        background-color: #05abe0; }
+      #dash .widget .bullet.lightTotal {
+        background-color: #272c4d; }
+      #dash .widget .bullet.yellow {
+        background-color: #fbc726; }
+      #dash .widget .bullet.lightblue {
+        background-color: #4fc6eb; }
+  #dash #widgetline1 {
+    height: 370px; }
+  #dash #chartline1 {
+    width: 480px;
+    height: 227px; }
+  #dash #trafficPercent {
+    font-family: Bahnschrift;
+    font-size: 28px; }
+  #dash .widget.totalnodes .actual {
+    font-family: Bahnschrift;
+    font-size: 28px; }
+  #dash .widget.totalnodes .percent {
+    color: #4fc6eb;
+    line-height: 1em;
+    font-family: Bahnschrift;
+    font-size: 16px;
+    text-align: right; }
+  #dash .widget.totalnodes .benchmark {
+    width: 100%;
+    font-family: Tahoma;
+    font-size: 14px;
+    margin: 10px 0 0px 0px; }
+    #dash .widget.totalnodes .benchmark .bar {
+      height: 4px;
+      border-radius: 3px;
+      background: #006bf7;
+      background: -moz-linear-gradient(left, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+      background: -webkit-linear-gradient(left, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+      background: linear-gradient(to right, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006bf7', endColorstr='#feffff',GradientType=1 ); }
+  #dash .widget.circle .actual {
+    font-family: Bahnschrift;
+    font-size: 28px; }
+  #dash .widget.circle .goal {
+    color: #4fc6eb;
+    text-align: center;
+    line-height: 1em;
+    font-family: Bahnschrift;
+    font-size: 22px; }
+    #dash .widget.circle .goal .label {
+      font-family: Tahoma;
+      font-size: 14px; }
+  #dash .widget.circle .benchmark {
+    width: 100%;
+    font-family: Tahoma;
+    font-size: 14px;
+    margin: 10px 0 0px 0px; }
+    #dash .widget.circle .benchmark .bar {
+      height: 4px;
+      border-radius: 3px;
+      background: #006bf7;
+      background: -moz-linear-gradient(left, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+      background: -webkit-linear-gradient(left, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+      background: linear-gradient(to right, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006bf7', endColorstr='#feffff',GradientType=1 ); }
+  #dash .circlechart {
+    width: 180px;
+    height: 180px;
+    background-image: url("/images/back-circle-chart.svg");
+    background-repeat: no-repeat;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 180px;
+    color: #808080;
+    font-family: Tahoma;
+    font-size: 40px; }
+    #dash .circlechart .arrow {
+      font-size: 20px;
+      color: #004d96; }
+    #dash .circlechart .sign {
+      font-size: 30px; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,474 @@
+$WIDGET: #272c31;
+$BACK1: #323233;
+$BACK2: #384145;
+$DBLUE: #08243c;
+$YELLOW:#fbc726;
+$LBLUE: #4fc6eb;
+$LGRAY: #808080;
+$MBLUE: #004d96;
+$RED:  #ff5175;
+$GREEN:#34cab2;
+$MAX: #272c4d;
+$IN: #ffbb00;
+$OUT: #05abe0;
+
+
+html body {
+    padding: 0;
+
+    background: $BACK1; /* Old browsers */
+    background: -moz-linear-gradient(top, $BACK1 0%, $BACK2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, $BACK1 0%, $BACK2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+        to bottom,
+        $BACK1 0%,
+        $BACK2 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    font: 14px "Tahoma", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+}
+a {
+    color: #00b7ff;
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 210px;
+    max-width: 210px;
+    background: #272830;
+    color: #fff;
+    transition: all 0.3s;
+
+    a,
+    a:hover,
+    a:focus {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    &.active {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+
+        .sidebar-header h3,
+        .CTAs {
+            display: none;
+        }
+
+        .sidebar-header strong {
+            display: block;
+        }
+    }
+
+    ul li a {
+        text-align: left;
+    }
+
+    &.active {
+        ul {
+            li a {
+                padding: 20px 10px;
+                text-align: center;
+                font-size: 0.85em;
+
+                i {
+                    margin-right: 0;
+                    display: block;
+                    font-size: 1.8em;
+                    margin-bottom: 5px;
+                }
+            }
+
+            ul a {
+                padding: 10px !important;
+            }
+        }
+
+        a {
+            &[aria-expanded="false"]::before,
+            &[aria-expanded="true"]::before {
+                top: auto;
+                bottom: 5px;
+                right: 50%;
+                -webkit-transform: translateX(50%);
+                -ms-transform: translateX(50%);
+                transform: translateX(50%);
+            }
+        }
+    }
+
+    .sidebar-header {
+        padding: 20px;
+        background: #272830;
+
+        strong {
+            display: none;
+            font-size: 1.8em;
+        }
+    }
+
+    ul {
+        &.components {
+            padding: 0 10px;
+        }
+
+        li {
+            padding: 5% 0;
+
+            a {
+                padding: 10px;
+                font-size: 1.1em;
+                display: block;
+
+                &:hover {
+                    color: #272830;
+                    background: #fff;
+                }
+
+                i {
+                    margin-right: 10px;
+                }
+            }
+
+            &.active > a {
+                color: #fff;
+                background: #323233;
+            }
+        }
+    }
+}
+
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #323233;
+}
+
+#sidebar ul li img {
+    width: 15%;
+    margin: 0 4% 0 0;
+}
+.hamburger {
+    width: 40px;
+    margin-right: 34px;
+}
+.search {
+    width: 40px;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+a[aria-expanded="false"]::before,
+a[aria-expanded="true"]::before {
+    content: "\e259";
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: "Glyphicons Halflings";
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: "\e260";
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: #272830;
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+a.menu {
+    display: inline-block;
+    padding: 10px;
+}
+
+.rounded-circle {
+    width: 50px;
+    height: 50px;
+}
+
+.user-panel {
+    padding: 0 0 0 19px !important;
+    margin: 15px 0 !important;
+}
+
+.info {
+    padding: 0 10px;
+    font-size: 14px;
+
+    #hour {
+        font-size: 2.5em;
+    }
+    #hour-seconds {
+        font-size: 1rem;
+    }
+    #hour-format {
+        vertical-align: top;
+        margin-top: 9px;
+        font-size: 10px;
+        padding-left: 5%;
+    }
+    #date {
+        color: #fff;
+        display: inline-block;
+        font-size: 1.2rem;
+    }
+}
+
+.float-sm-right {
+    float: right !important;
+    color: #bebec0;
+}
+.breadcrumb {
+    margin-top: 1rem;
+}
+.breadcrumb-item.active {
+    color: #ffffff;
+}
+
+
+
+
+.chart-container {
+    width: auto !important;
+    height: 450px !important;
+}
+
+
+#dash {
+    .col-md-6 {
+        width: 48%;
+        .valor{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .col-md-5 {
+        width: 39% !important;
+        #trafficCircle {
+            height: 150px !important;
+            width: 150px !important;
+            float: right;
+            margin: 25px;
+        }
+        .valor {
+            margin-top: 15%;
+        }
+    }
+    padding: 0;
+    .title {
+        font-family: Bahnschrift;
+        font-size: 50px;
+        text-shadow: 5px 5px rgba(0, 0, 0, 0.75);
+    }
+    .widget {
+        float: left;
+        background-color: $WIDGET;
+        margin: 20px 0 0 12px;
+        border-radius: 8px;
+
+        .head {
+            padding: 5px 16px;
+            border-bottom: solid 1px #ffffff;
+
+            .filters {
+                width: 100%;
+                justify-items: initial;
+                display: inline-flex;
+                justify-content: space-between;
+                margin: 2px 0 0 0;
+
+                .close {
+                    width: 16px;
+                    margin: 0 -15px 3px 10px;
+                    float: right;
+                }
+            }
+
+            input[type="button"] {
+                border: solid 1px $LBLUE;
+                background-color: transparent;
+                color: #ffffff;
+                width: 120px;
+                height: 26px;
+                border-radius: 13px;
+            }
+        }
+        .rainbow {
+            width: 8px;
+            height: 0;
+            margin-left: 10px 0 0 20px;
+            border-radius: 5px;
+
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff5b32+0,fff830+50,40ff32+78,00bff9+100 */
+            background: #ff5b32; /* Old browsers */
+            background: -moz-linear-gradient(top, #ff5b32 0%, #fff830 50%, #40ff32 78%, #00bff9 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(
+                top,
+                #ff5b32 0%,
+                #fff830 50%,
+                #40ff32 78%,
+                #00bff9 100%
+            ); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(
+                to bottom,
+                #ff5b32 0%,
+                #fff830 50%,
+                #40ff32 78%,
+                #00bff9 100%
+            ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5b32', endColorstr='#00bff9',GradientType=0 ); /* IE6-9 */
+
+            box-shadow: 5px 5px rgba(0, 0, 0, 0.75);
+            margin: 5px 0 0 10px;
+        }
+        .bullet {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            margin: 0 0 0 50px;
+            &.darkblue {
+                background-color: $DBLUE;
+            }
+            &.lightIn {
+                background-color: $IN;
+            }
+            &.lightOut {
+                background-color: $OUT;
+            }
+            &.lightTotal {
+                background-color: $MAX;
+            }
+            &.yellow {
+                background-color: $YELLOW;
+            }
+            &.lightblue {
+                background-color: $LBLUE;
+            }
+        }
+    }
+    #widgetline1 {
+        height: 370px;
+    }
+    #chartline1 {
+        width: 480px;
+        height: 227px;
+    }
+    #trafficPercent {
+        font-family: Bahnschrift;
+        font-size: 28px;
+    }
+    .widget.totalnodes {
+        .actual {
+            font-family: Bahnschrift;
+            font-size: 28px;
+        }
+        .percent {
+            color: $LBLUE;
+            line-height: 1em;
+            font-family: Bahnschrift;
+            font-size: 16px;
+            text-align: right;
+        }
+        .benchmark {
+            width: 100%;
+            font-family: Tahoma;
+            font-size: 14px;
+            margin: 10px 0 0px 0px;
+
+            .bar {
+                height: 4px;
+                border-radius: 3px;
+                background: #006bf7;
+                background: -moz-linear-gradient(left, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+                background: -webkit-linear-gradient(left, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+                background: linear-gradient(to right, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006bf7', endColorstr='#feffff',GradientType=1 );
+            }
+        }
+    }
+    .widget.circle {
+        .actual {
+            font-family: Bahnschrift;
+            font-size: 28px;
+        }
+        .goal {
+            color: $LBLUE;
+            text-align: center;
+            line-height: 1em;
+            font-family: Bahnschrift;
+            font-size: 22px;
+            .label {
+                font-family: Tahoma;
+                font-size: 14px;
+            }
+        }
+        .benchmark {
+            width: 100%;
+            font-family: Tahoma;
+            font-size: 14px;
+            margin: 10px 0 0px 0px;
+            .bar {
+                height: 4px;
+                border-radius: 3px;
+                background: #006bf7;
+                background: -moz-linear-gradient(left, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+                background: -webkit-linear-gradient(left, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+                background: linear-gradient(to right, #006bf7 0%, #ddf1f9 65%, #feffff 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006bf7', endColorstr='#feffff',GradientType=1 );
+            }
+        }
+    }
+
+    .circlechart {
+        width: 180px;
+        height: 180px;
+        background-image: url("/images/back-circle-chart.svg");
+        background-repeat: no-repeat;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 180px;
+        color: $LGRAY;
+        font-family: Tahoma;
+        font-size: 40px;
+
+        .arrow {
+            font-size: 20px;
+            color: #004d96;
+        }
+        .sign {
+            font-size: 30px;
+        }
+    }
+}

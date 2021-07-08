@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+    //- es importante que la tabla tenga THEAD y TBODY
+    table#grid
+        thead
+            tr
+                th Texto
+                th Número
+                th Numerito
+                th Fecha
+        tbody
+            -for (let o of data)
+                tr
+                    td= o.a
+                    td= o.b
+                    td= o.c
+                    td= o.d
+
+    script $("#grid").dataTable()

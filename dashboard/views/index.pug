@@ -1,0 +1,65 @@
+extends layout
+
+block content
+    // /#sidebar-wrapper
+    .d-flex
+      form#optionsForm
+        .form-row
+          .col-auto
+            label.sr-only(for='dateStart') Fecha Inicio
+            input#dateStart.form-control.mb-2(type='date' placeholder='FechaInicio')
+          .col-auto
+            label.sr-only(for='dateEnd') Fecha Fin
+            input#dateEnd.form-control.mb-2(type='date' placeholder='FechaFin')
+          .col-auto
+            label.sr-only(for='Canal') Canal
+            select#channel.form-control(aria-label="Canal")
+              option(selected value="suc") Sucursales
+              option(value="emp") Empresas
+              option(value="atm") ATM
+              option(value="spei") Spei
+          .col-auto
+            input.btn.btn-primary.mb-2(type='button', value='Buscar', onclick="GetData()")
+
+    .row#dash
+       div.col-md-6.widget
+        div.head
+            .filters
+                h5= title 
+                img.close(src="/images/icon-btn-close.svg")
+            .filters
+                input.filterDay(type="button" value="Hoy" onclick="filterDay()" style="background-color: #4fc6eb; color: #272C31")
+                input.filterWeek(type="button" onclick="filterWeek()" value="Semana")
+                input.filterYear(type="button" onclick="filterYear()" value="Año")
+            table(style="width:100%;")
+              tr
+                  td
+                      .rainbow
+                  td
+                      .triangle-left#trianglewg_line
+                  td
+                      canvas#myChart()
+       div.col-md-6.widget
+          div.head
+              .filters
+                  h5= title 
+                  img.close(src="/images/icon-btn-close.svg")
+              .filters
+                  input.filterDay(type="button" value="Hoy" onclick="filterDay()" style="background-color: #4fc6eb; color: #272C31")
+                  input.filterWeek(type="button" onclick="filterWeek()" value="Semana")
+                  input.filterYear(type="button" onclick="filterYear()" value="Año")
+              table(style="width:100%;")
+                tr
+                    td
+                        .rainbow
+                    td
+                        .triangle-left#trianglewg_line
+                    td
+                        canvas#myChart2()
+
+
+    
+
+block append scripts
+  script(src="/javascripts/charts.js") 
+  script setupRefresh();

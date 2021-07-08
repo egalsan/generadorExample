@@ -1,0 +1,22 @@
+
+var results=[];
+const CSVToJSON = require('csvtojson');
+
+// convert users.csv file to JSON array
+const getHist=  async  function()  {
+    try {
+        const users = await CSVToJSON().fromFile('Curva.csv');
+
+        for (var i = 0; i < users.length; i++){
+            // look for the entry with a matching `code` value
+            results.push(users[i].Hour)
+          }
+
+        return(results);
+    } catch (err) {
+        console.log(err);
+    }
+};
+
+getHist().then(v=>{console.log(v)})
+module.exports=getHist;
